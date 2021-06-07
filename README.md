@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados:
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Endhel Lopes de Freitas
+- Matrícula: 17.1.8152
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 7º Semestre
+- Link para o seu GitHub: https://github.com/endhel
 
 ## [Projeto final:](./Projeto/README.md) 
 
