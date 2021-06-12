@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+
+    <style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }   
+
+        header {
+            background-color: #5F2AC7;
+            width: 100%;
+            height: 110px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 40px;
+            margin-left: 30px;
+        }
+
+        .menu {
+            background-color: #3C1F95;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 30px;
+        }
+
+        a:hover {
+            font-weight: bold;     
+        }
+
+        a:active {
+            color: #5F2AC7;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 40px;
+            padding: 10px 40px;
+        }
+
+        .perfil {
+            padding: 10px 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .data {
+            align-items: stretch;
+        }
+
+        .data-title {
+            color: #3C1F95;
+            font-weight: bold;
+        }
+
+        .data p {
+            color: rgb(39, 38, 38);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Sistema Web</h1>
+        </div>
+    </header>
+
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="estados.html">Estados</a>
+        <a href="cidades.html">Cidades</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="pessoas.html">Pessoas</a>
+        <a href="compras.html">Compras</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="cadastro.html">Cadastro de Pessoas</a>
+        <a href="relatorio.html">Relatório</a>
+        <a href="sair.html">Sair</a>
+    </div>
+
+    <h2>Carlos Azevedo</h2>
+
+    <div class="perfil">
+        <div>
+            <img width="25%" src="../exercicio-01/img/foto.jpg" alt="Foto de Perfil">
+        </div>
+
+        <div class="data">
+            <div>
+                <h3 class="data-title">Dados Pessoais</h3>
+                <p>Nome: Carlos Azevedo Guedes</p>
+                <p>Usuário: @carlos_azevedo</p>
+                <p>E-mail: carlos_azevedo@ufop.edu.br</p>
+                <p>Data de Criação: 27 Ago 2020</p>
+                <p>Último acesso: 3 Jun 2021</p>
+            </div>
+        
+            <div>
+                <h3 class="data-title">Endereço</h3>
+                <p>Cidade: João Monlevade</p>
+                <p>Bairro: José Elói</p>
+                <p>Rua: Nova Era</p>
+                <p>Número: 273</p>
+                <p>CEP: 35930448</p>
+                <p>Estado: Minas Gerais</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
