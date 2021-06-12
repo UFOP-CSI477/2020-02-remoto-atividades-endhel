@@ -6,24 +6,19 @@
     <title>Home</title>
 
     <style type="text/css">
-        #titulo {
+
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }   
+
+        header {
             background-color: #5F2AC7;
             height: 110px;
-            margin: 0;
-            clear: both;
-        }
-
-        #wrapper {
-            max-width: 940px;
-            margin: 0 auto;
-            padding: 0 5%;
-            clear: both;
-        }
-
-        #cabecalho {
-            background-color: #3C1F95;
-            margin: 0;
-            height: 30px;
         }
 
         h1 {
@@ -32,36 +27,51 @@
             margin-left: 30px;
         }
 
+        .menu {
+            background-color: #3C1F95;
+            height: 30px;
+            text-align: center;
+        }
+
         a {
             color: white;
-            font-family: arial;
-            margin: 30px;
-            margin-top: 10px;
             text-decoration: none;
+            padding: 30px;
+        }
+
+        a:hover {
+            font-weight: bold;
+            
+        }
+
+        a:active {
+            color: #5F2AC7;
+            font-weight: bold;
         }
     </style>
 </head>
 
-<body style="margin: 0;">
+<body>
+    
     <header>
-
-        <div id="titulo">
+        <div>
             <h1>Sistema Web</h1>
         </div>
-
-        <div id="cabecalho">
-            <a href="home.html">Home</a>
-            <a href="estados.html">Estados</a>
-            <a href="cidades.html">Cidades</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="pessoas.html">Pessoas</a>
-            <a href="compras.html">Compras</a>
-            <a href="perfil.html">Perfil</a>
-            <a href="cadastro.html">Cadastro de Pessoas</a>
-            <a href="relatorio.html">Relatório</a>
-            <a href="sair.html">Sair</a>
-        </div>
     </header>
+
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="estados.html">Estados</a>
+        <a href="cidades.html">Cidades</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="pessoas.html">Pessoas</a>
+        <a href="compras.html">Compras</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="cadastro.html">Cadastro de Pessoas</a>
+        <a href="relatorio.html">Relatório</a>
+        <a href="sair.html">Sair</a>
+    </div>
+    
 
 </body>
 
