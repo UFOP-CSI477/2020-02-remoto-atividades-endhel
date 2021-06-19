@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao ao JS</title>
+
+    <script>
+
+        function Pessoa(nome, idade, endereco) {
+            this.nome = nome
+            this.idade = idade
+            this.endereco = endereco
+        }
+        
+        function carregarDados() {
+            const nome = window.prompt('Insira seu nome: ')
+            const idade = window.prompt('Insira seu idade: ')
+            const endereco = window.prompt('Insira seu endereco: ')
+
+            const pessoa = new Pessoa(nome, idade, endereco)
+
+            document.getElementById("nome").innerHTML = pessoa.nome
+            document.getElementById("idade").innerHTML = pessoa.idade
+            document.getElementById("endereco").innerHTML = pessoa.endereco
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write('Aula 10')
+    </script>
+
+    <div id="dados">
+        <div id="nome"></div>
+        <div id="idade"></div>
+        <div id="endereco"></div>
+    </div>
+
+    <input type="button" value="Carregar" onclick="carregarDados()">
+</body>
+</html>
