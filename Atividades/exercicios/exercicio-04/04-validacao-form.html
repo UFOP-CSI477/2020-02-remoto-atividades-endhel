@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+
+    <title>Cadastro de Pessoas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="validacao.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand px-2" href="#">Sistema Web</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="03-set-interval.html">Home</a>
+                    <a class="nav-item nav-link" href="perfil.html">Perfil</a>
+                    <a class="nav-item nav-link active" href="04-validacao-form.html">Cadastro</a>
+                    <a class="nav-item nav-link" href="relatorio.html">Relatório</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h3 class="d-flex justify-content-center p-2">Cadastro de Pessoas</h3>
+
+    <div class="d-flex justify-content-center">
+        <form name="dados" style="width: 50%;">
+
+            <div class="form-group p-2">
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome completo" class="form-control">
+            </div>
+
+            <div class="form-group p-2">
+                <input type="text" name="endereco" id="endereco" placeholder="Digite o endereço" class="form-control">
+            </div>
+
+            <div class="form-group p-2">
+                <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF" class="form-control">
+            </div>
+
+            <div class="form-group p-2">
+                <input type="text" name="rg" id="rg" placeholder="Digite o RG" class="form-control">
+            </div>
+
+            <div class="form-group p-2">
+                <input type="text" name="dtnasc" id="dtnasc" placeholder="Digite a data de nascimento"
+                    class="form-control">
+            </div>
+
+            <div class="form-group p-2">
+                <input type="text" name="naturalidade" id="naturalidade" placeholder="Digite o local de nascimento"
+                    class="form-control">
+            </div>
+
+            <div class="form-group p-2">
+                <input type="text" name="email" id="email" placeholder="Digite o e-mail" class="form-control">
+            </div>
+
+            <div class="form-group p-2">
+                <input type="text" name="tell" id="tell" placeholder="Digite o número de telefone" class="form-control">
+            </div>
+
+            <div class="d-flex justify-content-center p-2">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" onclick="validar()">
+                <input type="reset" value="Limpar" class="btn btn-danger">
+            </div>
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
