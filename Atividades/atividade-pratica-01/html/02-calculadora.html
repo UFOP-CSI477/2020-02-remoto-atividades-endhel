@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Calculadora</title>
+
+    <script src="../js/02-calculadora.js"></script>
+
+	<link rel="stylesheet" href="../css/02-calculadora.css">
+</head>
+<!-- create table -->
+<body>
+    <div class="body">
+        <div class="title">Calculadora</div>
+        <table>
+            <tr>
+                <td colspan="3"><input type="text" id="resultado"/></td>
+                <td><input type="button" value="c" onclick="limpar()" style="width: 55px;"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="digitar('1')"/> </td>
+                <td><input type="button" value="2" onclick="digitar('2')"/> </td>
+                <td><input type="button" value="3" onclick="digitar('3')"/> </td>
+                <td><input type="button" value="/" onclick="digitar('/')"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="digitar('4')"/> </td>
+                <td><input type="button" value="5" onclick="digitar('5')"/> </td>
+                <td><input type="button" value="6" onclick="digitar('6')"/> </td>
+                <td><input type="button" value="-" onclick="digitar('-')"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="digitar('7')"/> </td>
+                <td><input type="button" value="8" onclick="digitar('8')"/> </td>
+                <td><input type="button" value="9" onclick="digitar('9')"/> </td>
+                <td><input type="button" value="+" onclick="digitar('+')"/> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="digitar('.')"/> </td>
+                <td><input type="button" value="0" onclick="digitar('0')"/> </td>
+                <td><input type="button" value="=" onclick="resolver()"/> </td>
+                <td><input type="button" value="x" onclick="digitar('*')"/> </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
