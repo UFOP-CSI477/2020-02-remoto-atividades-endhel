@@ -10,5 +10,5 @@
 
 ## [Projeto final:](./Projeto/README.md) 
 
-Apresente uma breve descrição do seu projeto.
+Loja online de equipamentos de informática. Este sistema terá as seguintes funções: cadastrar, atualizar e excluir produtos; Página de login para o proprietário; Pesquisar produtos; Fornecer informações dos produtos e opção de compra para os clientes.
 
