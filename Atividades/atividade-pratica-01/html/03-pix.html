@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="../js/03-pix.js"></script>
+
+    <title>Pix</title>
+
+</head>
+<body onload="carregarAgencias()">
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand p-3" href="#">PIX</a>
+            <a class="navbar-brand p-3 lead" href="#">Agora se tornou muito mais fácil enviar e receber dinheiro!</a>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        
+        <div class="row pt-5">
+            <div class="col-5 pr-5">
+                <div class="form-group">
+                    <form method="get" action="03-pix.html">
+                        <div>
+                            <select id="tipo_chave" class="form-control" name="tipo_chave">
+                                <option value="">Selecionar o  tipo de chave pix</option>
+                                    <option>CPF</option>
+                                    <option>CNPJ</option>
+                                    <option>Email</option>
+                                    <option>Número de celular</option>
+                                    <option>Chave aleatória</option>
+                            </select>
+                        </div>
+        
+                        <div class="well text-left pt-3">
+                            <div class="chave">
+                                <input type="text" name="chave" id="chave" placeholder="Digite sua chave Pix" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="pt-3">
+                            <select name="agencia" id="agencia" class="form-control">
+                                <option value="">Selecione a agência bancária</option>
+                            </select>
+                        </div>
+        
+                        <div class="pt-3">
+                            <select id="op" class="form-control" name="op">
+                                <option value="">Selecione a operação</option>
+                                    <option>Enviar</option>
+                                    <option>Receber</option>
+                            </select>
+                        </div>
+
+                        <div class="pt-3">
+                            <input type="number" step="0.01" min="0.00" name="valor" id="valor" placeholder="Digite o valor" class="form-control">
+                        </div>
+
+                        <div class="pt-3">
+                            <input type="date" name="data" id="data" placeholder="Digite a data" class="form-control">
+                        </div>
+                    </form>
+                </div>
+        
+                <div class="d-flex justify-content-center py-3">
+                    <button type="button" class=" btn btn-primary text-white font-weight-bold" onclick="addPix()" id="finalizar">Finalizar</button>
+                </div>
+            </div>
+
+            <div class="col-7 pl-5">
+                <div class="table-responsive">
+                    <table id="tabela" class="table table-bordered table-hover table-sm table-striped border-dark bg-white rounded">
+                        <thead class="table-secondary bg-primary">
+                            <tr class="align-items-center text-white">
+                                <th>Data</th>
+                                <th>Tipo Pix</th>
+                                <th>Chave Pix</th>
+                                <th>Operação</th>
+                                <th>Agência Bancária</th>
+                                <th>Valor (R$)</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
