@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Consumo de combustível</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <script src="../js/04-consumo.js"></script>
+</head>
+
+<body>
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand p-3" href="#">Consumo de combustível</a>
+    </nav>
+
+  </header>
+
+  <div class="container pt-4">
+
+    <div class="row" id="dadosContainer">
+      <div class="col-4">
+
+        <div class="form-group">
+          <form name="veiculos">
+            <div>
+              <input type="text" id="combustivel" placeholder="Digite a quantidade de combustível" 
+              class="form-control"/>
+            </div>
+    
+            <div class="pt-3">
+              <input type="text" id="quilometros" placeholder="Digite a quantidade de quilômetros rodados"
+               class="form-control"/>
+            </div>
+          </form>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+          <button class="btn btn-success" id="salvar" onClick="carregarVeiculos()">Salvar veículo</button>
+        </div>
+  
+        <div class="d-flex justify-content-center mt-3">
+          <button type="button" id="btn-finish" class="btn btn-danger" onClick="finalizar()">Finalizar</button>
+        </div>
+
+        <div id="relatorio_final" class="mt-5"></div>
+
+      </div>
+
+      <div class="col-8">
+        <div class="table-responsive">
+            <table id="tabela" class="table table-bordered table-hover table-sm table-striped border-dark bg-white rounded">
+                <thead class="table-secondary bg-primary">
+                    <tr class="align-items-center text-white">
+                        <th>Veículo</th>
+                        <th>Quantidade de combustível (L)</th>
+                        <th>Quilômetros rodados (Km)</th>
+                        <th>Desempenho (Km/L)</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button type="button" id="btn-clear" class="btn-secondary mt-3" onClick="limpar()">Limpar</button>
+        </div>
+    </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
