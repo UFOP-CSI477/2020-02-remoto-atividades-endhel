@@ -41,7 +41,8 @@
         
                         <div class="well text-left pt-3">
                             <div class="chave">
-                                <input type="text" name="chave" id="chave" placeholder="Digite sua chave Pix" class="form-control">
+                                <input type="text" name="chave" id="chave" placeholder="Digite sua chave Pix" 
+                                class="form-control">
                             </div>
                         </div>
                         
@@ -60,7 +61,8 @@
                         </div>
 
                         <div class="pt-3">
-                            <input type="number" step="0.01" min="0.00" name="valor" id="valor" placeholder="Digite o valor" class="form-control">
+                            <input type="number" step="0.01" min="0.00" name="valor" id="valor" 
+                            placeholder="Digite o valor" class="form-control">
                         </div>
 
                         <div class="pt-3">
@@ -70,13 +72,20 @@
                 </div>
         
                 <div class="d-flex justify-content-center py-3">
-                    <button type="button" class=" btn btn-primary text-white font-weight-bold" onclick="addPix()" id="finalizar">Finalizar</button>
+                    <button type="button" class=" btn btn-primary text-white font-weight-bold" 
+                    onclick="addPix()" id="fazer_pix">Fazer Pix</button>
+                </div>
+
+                <div class="d-flex justify-content-center py-3">
+                    <button type="button" class=" btn btn-success text-white font-weight-bold" onclick="finalizar()" 
+                    id="finalizar">Exibir Relatório</button>
                 </div>
             </div>
 
             <div class="col-7 pl-5">
                 <div class="table-responsive">
-                    <table id="tabela" class="table table-bordered table-hover table-sm table-striped border-dark bg-white rounded">
+                    <table id="tabela" class="table table-bordered table-hover table-sm table-striped 
+                    border-dark bg-white rounded">
                         <thead class="table-secondary bg-primary">
                             <tr class="align-items-center text-white">
                                 <th>Data</th>
@@ -89,6 +98,8 @@
                         </thead>
                     </table>
                 </div>
+
+                <div id="relatorio_final" class="mt-4"></div>
             </div>
         </div>
 
