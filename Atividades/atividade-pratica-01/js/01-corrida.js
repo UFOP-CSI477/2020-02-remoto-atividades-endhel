@@ -1,3 +1,17 @@
+let lista_competidores = []
+
+class Competidor {
+
+    constructor(largada, nome, tempo) {
+
+        this.largada = largada
+        this.nome = nome
+        this.tempo = tempo
+
+    }
+
+}
+
 function validar(nome, tempo) {
 
     competidor = nome.value
@@ -8,6 +22,7 @@ function validar(nome, tempo) {
         window.alert('Por favor, preencha os campos corretamente!')
         nome.focus()
         return false
+
     }
 
     return true
@@ -19,6 +34,10 @@ function carregarDados(nome, tempo) {
     if (validar(nome, tempo)) {
 
         var qntLinhas = document.getElementById('competidores').rows.length
+
+        const competidor = new Competidor(qntLinhas, nome.value, tempo.value)
+
+        lista_competidores.push(competidor)
 
         if (qntLinhas <= 6) {
 
@@ -41,48 +60,35 @@ function carregarDados(nome, tempo) {
             window.alert('O número máximo de competidores foi excedido!')
 
         }
+
     }
+
 }
 
-class Competidor {
-    constructor(largada, nome, tempo) {
-        this.largada = largada
-        this.nome = nome
-        this.tempo = tempo
-    }
-}
+function ordenar_competidores() {
 
-function ordenar_competidores(tb) {
+    lista_competidores.sort(
 
-    const lista_competidores = []
-    table = tb
+        function (competidor_1, competidor_2) {
 
-    for (i = 1; i < table.rows.length; i++) {
+            if (competidor_1.tempo < competidor_2.tempo) {
 
-        const competidor = new Competidor(table.rows[i].cells[0].innerHTML,
-            table.rows[i].cells[1].innerHTML,
-            table.rows[i].cells[2].innerHTML)
+                return -1
 
-        if (lista_competidores.length == 0) {
-            lista_competidores.push(competidor)
-        }
-        else {
-            const tam = lista_competidores.length
+            } else if (competidor_1.tempo > competidor_2.tempo) {
 
-            for (j = 0; j < tam; j++) {
-                if (lista_competidores[j].tempo > table.rows[i].cells[2].innerHTML) {
-                    lista_competidores.splice(j, 0, competidor)
-                    break
-                }
+                return 1
+
+            } else {
+
+                return 0
+
             }
 
-            if (lista_competidores.length == tam) {
-                lista_competidores.push(competidor)
-            }
         }
-    }
 
-    return lista_competidores
+    );
+
 }
 
 function classificacaoFinal() {
@@ -90,7 +96,9 @@ function classificacaoFinal() {
     var tb = document.getElementById('competidores')
     var classificacao = document.getElementById('classificacao')
 
-    competidores_ord = ordenar_competidores(tb)
+    enabledButtons()
+
+    ordenar_competidores()
 
     for (i = 0; i < competidores_ord.length; i++) {
 
@@ -108,13 +116,55 @@ function classificacaoFinal() {
         cellTempo.innerHTML = competidores_ord[i].tempo
 
         if (i <= 1) {
+
             cellResultado.innerHTML = 'Vencedor(a)!'
+
         }
 
         else {
+
             cellResultado.innerHTML = '-'
+
         }
 
     }
+
+}
+
+function disabledButtons() {
+
+    const bt_resultado = document.getElementById('resultados')
+    bt_resultado.disabled = false
+
+    const bt_inserir = document.getElementById('inserir')
+    bt_inserir.disabled = false
+
+}
+
+function enabledButtons() {
+
+    const bt_resultado = document.getElementById('resultados')
+    bt_resultado.disabled = true
+
+    const bt_inserir = document.getElementById('inserir')
+    bt_inserir.disabled = true
+
+}
+
+function resetTables() {
+
+    var tb = document.getElementById('competidores')
+    var classificacao = document.getElementById('classificacao')
+
+    tam = tb.rows.length
+
+    for (i = 1; i < tam; i++) {
+
+        tb.deleteRow(1)
+        classificacao.deleteRow(1)
+
+    }
+
+    disabledButtons()
 
 }
