@@ -1,9 +1,11 @@
 let veiculos = [];
 
 function Veiculo(combustivel, quilometros, desempenho) {
+
     this.combustivel = combustivel
     this.quilometros = quilometros
     this.desempenho = desempenho
+
 }
 
 function validar(combustivel, quilometros) {
@@ -12,6 +14,7 @@ function validar(combustivel, quilometros) {
 
         window.alert('Por favor, preencha os campos corretamente!')
         return false
+
     }
 
     return true
@@ -49,55 +52,64 @@ function carregarVeiculos() {
 
 function finalizar() {
 
-    const relatorio_final = document.getElementById("relatorio_final");
 
-    if (relatorio_final.childElementCount == 0) {
-        if (veiculos.length == 0) {
-            window.alert('Não há nenhum veículo registrado na página!')
-        } else {
+    if (veiculos.length == 0) {
 
-            const qnt_veiculos = veiculos.length;
+        window.alert('Não há nenhum veículo registrado na página!')
 
-            let qnt_combustivel = 0
-            let km_total = 0
+    } else {
 
-            for (let i = 0; i < qnt_veiculos; i++) {
-                qnt_combustivel += parseFloat(veiculos[i].combustivel);
-                km_total += parseFloat(veiculos[i].quilometros);
-            }
+        const relatorio_final = document.getElementById("relatorio_final")
 
-            media_combustivel = qnt_combustivel / qnt_veiculos;
-            media_km = km_total / qnt_veiculos;
-            media_desempenho = km_total / qnt_combustivel;
+        if (relatorio_final.childElementCount > 0) {
 
-
-            let relatorioFinal = document.getElementById("relatorio_final");
-
-            let qntCombustivel = document.createElement("p");
-            let kmTotal = document.createElement("p");
-            let mediaCombustivel = document.createElement("p");
-            let mediaKm = document.createElement("p");
-            let mediaDesempenho = document.createElement("p");
-
-            qntCombustivel.innerHTML = `Quantidade total de combustível utilizada: ${qnt_combustivel.toFixed(1)}`;
-            kmTotal.innerHTML = `Quantidade total de quilômetros rodados: ${km_total.toFixed(1)}`;
-            mediaCombustivel.innerHTML = `Média de consumo de combustível: ${media_combustivel.toFixed(1)}`;
-            mediaKm.innerHTML = `Média de quilômetros rodados: ${media_km.toFixed(1)}`;
-            mediaDesempenho.innerHTML = `Média de desempenho em quilômetros por litro (km/l): ${media_desempenho.toFixed(2)}`;
-
-            relatorioFinal.appendChild(qntCombustivel);
-            relatorioFinal.appendChild(kmTotal);
-            relatorioFinal.appendChild(mediaCombustivel);
-            relatorioFinal.appendChild(mediaKm);
-            relatorioFinal.appendChild(mediaDesempenho);
+            limpar_relatorio(relatorio_final)
 
         }
 
+        const qnt_veiculos = veiculos.length
+
+        let qnt_combustivel = 0
+        let km_total = 0
+
+        for (let i = 0; i < qnt_veiculos; i++) {
+            qnt_combustivel += parseFloat(veiculos[i].combustivel)
+            km_total += parseFloat(veiculos[i].quilometros)
+        }
+
+        media_combustivel = qnt_combustivel / qnt_veiculos
+        media_km = km_total / qnt_veiculos
+        media_desempenho = km_total / qnt_combustivel
+
+
+        let relatorioFinal = document.getElementById("relatorio_final")
+
+        let qntCombustivel = document.createElement("p")
+        let kmTotal = document.createElement("p")
+        let mediaCombustivel = document.createElement("p")
+        let mediaKm = document.createElement("p")
+        let mediaDesempenho = document.createElement("p")
+
+        qntCombustivel.innerHTML = `Quantidade total de combustível utilizada: ${qnt_combustivel.toFixed(1)}`
+        kmTotal.innerHTML = `Quantidade total de quilômetros rodados: ${km_total.toFixed(1)}`
+        mediaCombustivel.innerHTML = `Média de consumo de combustível: ${media_combustivel.toFixed(1)}`
+        mediaKm.innerHTML = `Média de quilômetros rodados: ${media_km.toFixed(1)}`
+        mediaDesempenho.innerHTML = `Média de desempenho em quilômetros por litro (km/l): ${media_desempenho.toFixed(2)}`
+
+        relatorioFinal.appendChild(qntCombustivel)
+        relatorioFinal.appendChild(kmTotal)
+        relatorioFinal.appendChild(mediaCombustivel)
+        relatorioFinal.appendChild(mediaKm)
+        relatorioFinal.appendChild(mediaDesempenho)
+
     }
+
+
 
 }
 
 function limpar() {
+
     document.getElementById("combustivel").value = ""
     document.getElementById("quilometros").value = ""
 
@@ -106,9 +118,9 @@ function limpar() {
     const relatorio_final = document.getElementById("relatorio_final");
 
     if (relatorio_final.childElementCount > 0) {
-        while (relatorio_final.lastElementChild) {
-            relatorio_final.removeChild(relatorio_final.lastElementChild);
-        }
+
+        limpar_relatorio(relatorio_final)
+
     }
 
     var tb = document.getElementById('tabela')
@@ -116,6 +128,18 @@ function limpar() {
     tam = tb.rows.length
 
     for (i = 1; i < tam; i++) {
+
         tb.deleteRow(1)
+
     }
+}
+
+function limpar_relatorio(relatorio_final) {
+
+    while (relatorio_final.lastElementChild) {
+
+        relatorio_final.removeChild(relatorio_final.lastElementChild);
+
+    }
+
 }
