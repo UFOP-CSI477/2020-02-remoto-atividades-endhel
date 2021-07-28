@@ -14,26 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Models\Produto;
+use App\Http\Controllers\ProdutoController;
 
-Route::get('/produtos/todos', function () {
-    $estados = Produto::all();
+// Route::get('/produtos/todos', function () {
+//     $estados = Produto::all();
 
-    return view('lista', [ 'dados' => $estados ]);
-});
+//     return view('lista', [ 'dados' => $estados ]);
+// });
 
-Route::get('/produtos/{id}', function ($id) {
-    $estado = Produto::find($id);
+// Route::get('/produtos/{id}', function ($id) {
+//     $estado = Produto::find($id);
 
-    if($estado == null){
-        return 'ID inválido!';
-    }
+//     if($estado == null){
+//         return 'ID inválido!';
+//     }
 
-    return view('lista', [ 'dados' => $estado ]);
+//     return view('lista', [ 'dados' => $estado ]);
     
-});
+// });
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('principal');
+})->name('principal');
+
+Route::resource('/produtos', ProdutoController::class);
 
 
