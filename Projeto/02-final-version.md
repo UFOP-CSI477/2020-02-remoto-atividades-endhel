@@ -11,9 +11,10 @@ Este trabalho consistiu em criar uma loja online de produtos de informática sim
 Este projeto terá as seguintes funcionalidades: Para o administrador, terá o cadastro no sistema e login para o acesso, e CRUD para produtos, marcas e categorias. Já para os clientes, terá o cadastro e login no sistema, ver produtos, pesquisar produtos, filtrar produtos por marca ou categoria, adicionar produtos ao carrinho e processar a compra.
   
 ### 2. Funcionalidades previstas e não implementadas
-
+Todas as funcionalidades definidas no escopo inicial foram implementadas.
 
 ### 3. Outras funcionalidades implementadas
+A emissão de nota fiscal foi implementada parcialmente. A página para sua emissão foi implementada, porém a emissão e os links para a página não foram implementadas.
 
 ### 4. Principais desafios e dificuldades
 A realização deste trabalho foi muito desafiador para mim devido ao fato de ter sido meu primeiro contato com programação Web. Além disso, a escolha pelo framework Flask para a realização do trabalho me impôs muitas dificuldades, principalmente na gestão do banco de dados, e me obrigou a procurar por ajuda em vários fórums de programação e na própria documentação do framework. Contudo, é evidente que isto que me fez aprender inúmeras coisas sobre a programação Web, afinal, em momentos de dificuldade é quando mais evoluimos como programador.
