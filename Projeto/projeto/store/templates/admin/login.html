@@ -1,0 +1,24 @@
+{% extends "layouts.html" %}
+
+{% block content %}
+
+{% include 'navbar_admin.html' %}
+
+{% include '_messages.html' %}
+
+<div class="container w-50 mt-5">
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post" enctype="multipart/form-data" class="w-100">
+        <div>
+            {{ render_field(form.email, class="form-control") }}
+            {{ render_field(form.password, class="form-control") }}
+            <div class="row w-100 d-flex justify-content-center">
+                <p><input type="submit" value="Entrar" class="btn btn-success mt-4 px-5"></p>
+            </div>
+            <p class="d-flex justify-content-center"><a href="{{url_for('register')}}">Não possui uma conta?
+                    Cadastre-se!</a></p>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

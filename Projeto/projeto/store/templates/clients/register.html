@@ -1,0 +1,48 @@
+{% extends "layouts.html" %}
+
+{% block content %}
+
+{% from "_formhelpers.html" import render_field %}
+
+{% include 'navbar.html' %}
+
+<div class="container mt-3">
+    <form action="" method="POST">
+        {{ form.csrf_token }}
+        {% include '_messages.html' %}
+        <input id="csrf_token" name="csrf_token" type="hidden"
+            value="ImYzODdmZTdhYTRlMmNkYWRjYmRlYWFmZjQxMDllZTQ1OWZmYzg3MTki.XKvOPg.gUCkF9j-vg0PrL2PRH-v43GeHu0">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                {{render_field(form.name, class="form-control")}}
+                {{render_field(form.username, class="form-control")}}
+                {{render_field(form.email, class="form-control")}}
+                {{render_field(form.password, class="form-control")}}
+                {{render_field(form.confirm, class="form-control")}}
+                {{render_field(form.country, class="form-control")}}
+            </div>
+            <div class="col-md-4">
+                {{render_field(form.state, class="form-control")}}
+                {{render_field(form.city, class="form-control")}}
+                {{render_field(form.contact, class="form-control")}}
+                {{render_field(form.address, class="form-control")}}
+                {{render_field(form.zipcode, class="form-control")}}
+                {{form.profile(style="margin-top: 38px;")}}
+            </div>
+            <div class="col-md-2"></div>
+            <div class="row d-flex justify-content-center w-100">
+                {{form.submit(class="btn btn-sm btn-success float-right px-4 mt-3")}}
+            </div>
+            <div class="row d-flex justify-content-center w-100">
+                <p class="d-flex justify-content-center mt-2"><a href="{{url_for('loginClient')}}">Já possui uma conta?
+                        Faça seu Login!</a></p>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock content %}

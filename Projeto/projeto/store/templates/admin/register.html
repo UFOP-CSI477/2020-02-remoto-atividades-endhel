@@ -1,0 +1,27 @@
+{% extends "layouts.html" %}
+
+{% block content %}
+
+{% include 'navbar_admin.html' %}
+
+<div class="container w-50 mt-5">
+    {% include '_messages.html' %}
+    {% from "_formhelpers.html" import render_field %}
+    <form method="post">
+        {{ form.csrf_token }}
+        <div>
+            {{ render_field(form.name, class="form-control") }}
+            {{ render_field(form.username, class="form-control") }}
+            {{ render_field(form.email, class="form-control") }}
+            {{ render_field(form.password, class="form-control") }}
+            {{ render_field(form.confirm, class="form-control") }}
+        </div>
+        <div class="row w-100 d-flex justify-content-center">
+            <p><input type="submit" value="Registrar" class="btn btn-success mt-4 px-5"></p>
+        </div>
+        <p class="d-flex justify-content-center"><a href="{{url_for('login')}}">Já possui uma conta?
+                Faça seu Login!</a></p>
+    </form>
+</div>
+
+{% endblock content %}
