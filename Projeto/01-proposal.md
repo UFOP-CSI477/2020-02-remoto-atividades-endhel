@@ -1,34 +1,26 @@
 # **CSI606-2020-02 - Remoto - Proposta de Trabalho Final**
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## *Aluna(o): Endhel Lopes de Freitas*
 
 --------------
 
-<!-- Descrever um resumo sobre o trabalho. -->
-
 ### Resumo
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+  Este trabalho consistiu em criar uma loja online de produtos de informática simples utilizando a linguagem Python e o framework Flask. O programa possui funcionalidades básicas para o administrador, como criar, ver, atualizar e deletar produtos, marcas e categorias. Além disso, o administrador também deve criar uma conta para conseguir ter acesso ao sistema. Já para os clientes, o sistema permite ver os produtos oferecidos pela loja, pesquisar por eles, ou até filtrar por marcas ou categorias. Ademais, o cliente pode adicionar produtos ao carrinho, deletar produtos do carrinho, ou atualizar a cor e/ou quantidade desejado. Por fim, para processar a compra, o cliente deve se cadastrar no sistema e fazer o login.
 
-<!-- Apresentar o tema. -->
 ### 1. Tema
 
-  O trabalho final tem como tema o desenvolvimento de ...
+  O trabalho final tem como tema o desenvolvimento de uma loja online de produtos de informática.
 
-<!-- Descrever e limitar o escopo da aplicação. -->
 ### 2. Escopo
 
-  Este projeto terá as seguintes funcionalidades...
+  Este projeto terá as seguintes funcionalidades: Para o administrador, terá o cadastro no sistema e login para o acesso, e CRUD para produtos, marcas e categorias. Já para os clientes, terá o cadastro e login no sistema, ver produtos, pesquisar produtos, filtrar produtos por marca ou categoria, adicionar produtos ao carrinho e processar a compra.
 
-<!-- Apresentar restrições de funcionalidades e de escopo. -->
 ### 3. Restrições
 
-  Neste trabalho não serão considerados ...
+  Neste trabalho não serão considerados formas de pagamento, cálculo de frete, comentários de usuários, emissão de nota fiscal, atendimento ao usuário, etc. Serão considerados apenas o que foi definido no escopo do projeto.
 
-<!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-  Protótipos para as páginas (descrever quais páginas) foram elaborados, e podem ser encontrados em...
 
 ### 5. Referências
 
-  Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT.
